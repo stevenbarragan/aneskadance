@@ -110,11 +110,17 @@
                     url("hero.jpg");
                 background-size: cover;
                 background-position: center;
-                background-attachment: fixed;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                position: relative;
+            }
+
+            @media (min-width: 992px) {
+                .hero {
+                    background-attachment: fixed;
+                }
             }
 
             .hero-content {
