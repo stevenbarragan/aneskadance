@@ -1,0 +1,22 @@
+* Setup June classes
+* Setup thank you page
+* Setup google ads
+* Setup brazilian stripe
+* Build brazilian website
+* Get/Setup aneska private's calendar
+* Sign waiver after purchase
+
+x Buy aneskadance.com domain
+x Create stripe links for april
+x Fix classes links
+x Fix social icons
+x Send private classes to whatsapp
+x Deploy aneska's website to new domain
+x Update/Fix google's maps company name
+x Create May stripe links
+x Update website with May links
+x Redirect www.aneskadance.com to aneskadance.com
+x Update hero image
+x Update aneska's logo
+x Add favicon
+x Setup zouk progress class
