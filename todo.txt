@@ -1,4 +1,3 @@
-* Setup June classes
 * Setup thank you page
 * Setup google ads
 * Setup brazilian stripe
@@ -20,3 +19,5 @@ x Update hero image
 x Update aneska's logo
 x Add favicon
 x Setup zouk progress class
+x Setup zouk beginners workshop
+x Setup June classes
