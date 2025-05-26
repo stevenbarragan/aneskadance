@@ -324,3 +324,75 @@ body {
     transform: scale(1.1);
     opacity: 1;
 }
+
+.thank-you-section {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .thank-you-section {
+        background-attachment: fixed;
+    }
+}
+
+.thank-you-content {
+    color: var(--light);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.thank-you-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--light);
+}
+
+.thank-you-subtitle {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    color: var(--light);
+}
+
+.rules-section {
+    background: var(--about-bg);
+    padding: 80px 0;
+}
+
+.rules-card {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.rule-icon {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.rule-title {
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.see-you-soon-section {
+    background: var(--classes-bg);
+    padding: 80px 0;
+    color: var(--light);
+    text-align: center;
+}
