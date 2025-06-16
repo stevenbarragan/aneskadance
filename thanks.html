@@ -5,27 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Thank you for booking your dance class with Aneska Dance in Los Angeles. We look forward to seeing you soon!"
+            content="Thank you for booking your dance class with Aneska Dance in Los Angeles. Please complete our liability waiver and review studio rules."
         />
         <meta
             name="keywords"
-            content="dance classes, Los Angeles dance, Zouk dance, Ballet for adults, Aneska França, dance instructor, private dance lessons, Salsa clases, Bachata clases, Samba clases, Culver City dance"
+            content="dance classes, Los Angeles dance, Zouk dance, Ballet for adults, Aneska França, dance instructor, private dance lessons, Salsa clases, Bachata clases, Samba clases, Culver City dance, liability waiver"
         />
         <meta name="author" content="Aneska França" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta
-            property="og:url"
-            content="https://aneskadance.com/thank-you.html"
-        />
+        <meta property="og:url" content="https://aneskadance.com/thanks.html" />
         <meta
             property="og:title"
-            content="Thank You for Booking | Aneska Dance"
+            content="Thank You & Next Steps | Aneska Dance"
         />
         <meta
             property="og:description"
-            content="Thank you for booking your dance class with Aneska Dance. We look forward to seeing you soon!"
+            content="Thank you for booking with Aneska Dance. Please complete our liability waiver and review studio rules before your class."
         />
         <meta property="og:image" content="logo.svg" />
 
@@ -33,21 +30,21 @@
         <meta property="twitter:card" content="summary_large_image" />
         <meta
             property="twitter:url"
-            content="https://aneskadance.com/thank-you.html"
+            content="https://aneskadance.com/thanks.html"
         />
         <meta
             property="twitter:title"
-            content="Thank You for Booking | Aneska Dance"
+            content="Thank You & Next Steps | Aneska Dance"
         />
         <meta
             property="twitter:description"
-            content="Thank you for booking your dance class with Aneska Dance. We look forward to seeing you soon!"
+            content="Thank you for booking with Aneska Dance. Please complete our liability waiver and review studio rules before your class."
         />
         <meta property="twitter:image" content="logo.svg" />
 
         <!-- Canonical URL -->
-        <link rel="canonical" href="https://aneskadance.com/thank-you.html" />
-        <title>Thank You | Aneska Dance</title>
+        <link rel="canonical" href="https://aneskadance.com/thanks.html" />
+        <title>Thank You & Next Steps | Aneska Dance</title>
         <link rel="icon" href="logo.svg" type="image/svg+xml" />
         <link
             rel="icon"
@@ -119,9 +116,54 @@
                     Your reservation has been confirmed. We can't wait to dance
                     with you!
                 </p>
-                <a href="#rules-section" class="btn btn-primary"
-                    >Review Studio Rules</a
+                <a
+                    href="#liability-waiver-section"
+                    class="btn btn-primary btn-lg mt-3"
+                    >Next: Important Steps</a
                 >
+            </div>
+        </section>
+
+        <!-- Liability Waiver Section -->
+        <section id="liability-waiver-section" class="py-5 bg-white">
+            <div class="container">
+                <div class="text-center">
+                    <h2 style="color: var(--primary); font-weight: 700">
+                        Liability Waiver
+                    </h2>
+                    <p class="lead">
+                        Before attending your class, please complete our
+                        liability waiver.
+                    </p>
+                    <p>
+                        <strong>Important:</strong> You only need to sign this
+                        once. If you've previously signed the waiver for Aneska
+                        Dance, you can skip this step.
+                    </p>
+                    <a href="#rules-section" class="btn btn-secondary mb-3"
+                        >I've Already Signed, Go to Studio Rules</a
+                    >
+                </div>
+
+                <div class="waiver-form-container text-center">
+                    <div style="overflow: hidden">
+                        <iframe
+                            title="Liability Waiver For Aneska Dance"
+                            src="https://www.jotform.com/sign/251636117660051/invite/01jxnfmbah05e6e271bc45b4b4?signEmbed=1"
+                            style="height: 80vh; width: 100%; border: none"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="lead mt-4">
+                        After completing the waiver, please proceed to review
+                        the studio rules.
+                    </p>
+                    <a href="#rules-section" class="btn btn-primary btn-lg"
+                        >Finished Signing? Review Studio Rules</a
+                    >
+                </div>
             </div>
         </section>
 
@@ -215,7 +257,8 @@
                             <h3 class="rule-title">Registration Form</h3>
                             <p>
                                 Be sure to sign the Registration Form before the
-                                class begins.
+                                class begins. (This refers to the liability
+                                waiver you just completed or confirmed.)
                             </p>
                         </div>
                     </div>
@@ -301,6 +344,31 @@
             // Apply scrolled class immediately since we're not at the top of the page
             document.addEventListener("DOMContentLoaded", function () {
                 navbar.classList.add("scrolled");
+
+                // Smooth scroll for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                    anchor.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute("href");
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            // Calculate position considering fixed navbar height
+                            const navbarHeight =
+                                document.getElementById("navbar").offsetHeight;
+                            const elementPosition =
+                                targetElement.getBoundingClientRect().top;
+                            const offsetPosition =
+                                elementPosition +
+                                window.pageYOffset -
+                                navbarHeight;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth",
+                            });
+                        }
+                    });
+                });
             });
         </script>
         <script
